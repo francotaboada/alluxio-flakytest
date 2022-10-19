@@ -23,5 +23,5 @@ jobs:
       run: mvn clean install -DskipTests -pl core/server/worker -am
     - name: Test without NonDex
       run: mvn -pl core/server/worker test -Dtest=alluxio.worker.block.BlockStoreMetaTest#getBlockList
-    - name: Flaky Testing
+    - name: Flaky Testing with NonDex
       run: mvn -pl core/server/worker edu.illinois:nondex-maven-plugin:1.1.2:nondex -Dtest=alluxio.worker.block.BlockStoreMetaTest#getBlockList
